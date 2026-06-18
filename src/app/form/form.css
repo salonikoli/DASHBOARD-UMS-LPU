@@ -1,0 +1,109 @@
+div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 10vh;
+  padding: 0.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #ffffff;
+  text-shadow: 0 2px 20px rgba(99, 102, 241, 0.3);
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: -0.02em;
+}
+
+form {
+  background: rgba(30, 41, 59, 0.6);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  border-radius: 20px;
+  padding: 10px;
+  backdrop-filter: blur(20px);
+  box-shadow: 0 20px 60px rgba(15, 23, 42, 0.4), 0 0 40px rgba(99, 102, 241, 0.1);
+  width: 100%;
+  max-width: 420px;
+}
+
+div > div {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.1rem;
+  align-items: flex-start;
+  justify-content: flex-start;
+  min-height: auto;
+  padding: 0;
+}
+
+div > div:last-of-type {
+  margin-bottom: 0.1rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.1rem;
+  color: #e2e8f0;
+  font-weight: 600;
+  font-size: 0.85rem;
+  letter-spacing: 0.3px;
+}
+
+input {
+  width: 100%;
+  padding: 0.6rem 0.8rem;
+  background: rgba(148, 163, 184, 0.1);
+  border: 2px solid rgba(148, 163, 184, 0.2);
+  border-radius: 10px;
+  color: #ffffff;
+  font-size: 0.9rem;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-sizing: border-box;
+}
+
+input:focus {
+  outline: none;
+  background: rgba(99, 102, 241, 0.1);
+  border-color: #6366f1;
+  box-shadow: 0 0 20px rgba(99, 102, 241, 0.3), inset 0 0 20px rgba(99, 102, 241, 0.1);
+}
+
+input::placeholder {
+  color: rgba(226, 232, 240, 0.5);
+}
+
+button {
+  width: 100%;
+  padding: 0.7rem 1.2rem;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  border: 2px solid #6366f1;
+  border-radius: 10px;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.9rem;
+  cursor: pointer;
+  backdrop-filter: blur(20px);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 10px 30px rgba(99, 102, 241, 0.3);
+  margin-top: 0.3rem;
+  letter-spacing: 0.5px;
+}
+
+button:hover {
+  background: linear-gradient(135deg, #8b5cf6, #a78bfa);
+  border-color: #a78bfa;
+  transform: translateY(-2px);
+  box-shadow: 0 15px 40px rgba(139, 92, 246, 0.4);
+}
+
+button:active {
+  transform: translateY(0);
+}

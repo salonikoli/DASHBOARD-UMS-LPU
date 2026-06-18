@@ -1,0 +1,245 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 2rem;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.content {
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  max-width: 600px;
+}
+
+.decorative-circle {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.3;
+  z-index: 0;
+}
+
+.circle-1 {
+  width: 400px;
+  height: 400px;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  top: -100px;
+  right: -100px;
+  animation: float1 15s ease-in-out infinite;
+}
+
+.circle-2 {
+  width: 300px;
+  height: 300px;
+  background: linear-gradient(135deg, #a78bfa, #ec4899);
+  bottom: -50px;
+  left: -50px;
+  animation: float2 12s ease-in-out infinite;
+}
+
+@keyframes float1 {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(-20px, 20px);
+  }
+}
+
+@keyframes float2 {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(20px, -20px);
+  }
+}
+
+.main-title {
+  font-size: 4.5rem;
+  font-weight: 800;
+  margin: 0 0 0.5rem 0;
+  background: linear-gradient(135deg, #ffffff, #e2e8f0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  animation: slideInDown 0.8s ease-out;
+}
+
+.subtitle {
+  font-size: 1.3rem;
+  color: #cbd5e1;
+  font-weight: 300;
+  margin: 0 0 2rem 0;
+  letter-spacing: 0.05em;
+  animation: slideInUp 0.8s ease-out 0.1s both;
+}
+
+.description {
+  margin-bottom: 2.5rem;
+  animation: fadeIn 1s ease-out 0.2s both;
+}
+
+.description p {
+  font-size: 1.1rem;
+  color: #cbd5e1;
+  line-height: 1.6;
+  letter-spacing: 0.3px;
+  margin: 0;
+}
+
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 1.1rem 2.8rem;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  border: 2px solid transparent;
+  border-radius: 12px;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.1rem;
+  backdrop-filter: blur(20px);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 10px 40px rgba(99, 102, 241, 0.3), 0 0 20px rgba(99, 102, 241, 0.2);
+  letter-spacing: 0.5px;
+  animation: slideInUp 0.8s ease-out 0.3s both;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.cta-button:hover::before {
+  left: 100%;
+}
+
+.cta-button:hover {
+  background: linear-gradient(135deg, #8b5cf6, #a78bfa);
+  border-color: #a78bfa;
+  transform: translateY(-3px);
+  box-shadow: 0 15px 50px rgba(139, 92, 246, 0.4), 0 0 30px rgba(139, 92, 246, 0.3);
+}
+
+.arrow {
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2.5;
+  transition: transform 0.3s ease;
+}
+
+.cta-button:hover .arrow {
+  transform: translateX(4px);
+}
+
+.features {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  margin-top: 4rem;
+  animation: fadeIn 1s ease-out 0.5s both;
+}
+
+.feature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+  transition: all 0.3s ease;
+}
+
+.feature-icon {
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background: rgba(99, 102, 241, 0.1);
+  border: 1px solid rgba(99, 102, 241, 0.2);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.feature:hover .feature-icon {
+  background: rgba(99, 102, 241, 0.2);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(99, 102, 241, 0.2);
+}
+
+.feature span {
+  font-size: 0.95rem;
+  color: #cbd5e1;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+@keyframes slideInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 640px) {
+  .main-title {
+    font-size: 3rem;
+  }
+
+  .subtitle {
+    font-size: 1.1rem;
+  }
+
+  .features {
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+
+  .cta-button {
+    padding: 1rem 2.2rem;
+    font-size: 1rem;
+  }
+}
