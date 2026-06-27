@@ -1,10 +1,14 @@
 import { Routes } from '@angular/router';
-import { Intro } from './intro/intro';
-import { Form } from './form/form';
+import { NewcomComponent } from './newcom/newcom';
+import { DashboardComponent } from './dashboard/dashboard';
 
 export const routes: Routes = [
-	{ path: '', redirectTo: 'intro', pathMatch: 'full' },
-	{ path: 'intro', component: Intro },
-	{ path: 'form', component: Form },
-	{ path: '**', redirectTo: 'intro' }
+  {
+    path: '',
+    component: NewcomComponent
+  },
+  {
+    path: 'dashboard',
+    component: DashboardComponent
+  }
 ];
